@@ -1,11 +1,11 @@
 language: node_js
 
 env:
-  - IMAGE_NAME: dockersample
+  - IMAGE_NAME=dockersample
 
 build:
   ci:
-	  - sudo docker build -t=balavignesh/noidea:$BRANCH.$SHIPPABLE_BUILD_NUMBER .
+	  - sudo docker build --rm -t=balavignesh/noidea:$BRANCH.$SHIPPABLE_BUILD_NUMBER .
 
   post_ci:
 	  - sudo docker push balavignesh/noidea:$BRANCH.$SHIPPABLE_BUILD_NUMBER
