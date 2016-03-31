@@ -1,8 +1,10 @@
 language: node_js
 
 env:
-  - IMAGE_NAME=balavignesh/noidea
-
+  - IMAGE_NAME=balavignesh/noidea:$BRANCH.$SHIPPABLE_BUILD_NUMBER
+  matrix:
+    - M1=one
+    - M2=two
 build:
   ci:
     - sudo docker build --rm -t=$IMAGE_NAME:$BRANCH.$SHIPPABLE_BUILD_NUMBER .

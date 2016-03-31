@@ -4,11 +4,10 @@ const express = require('express');
 
 // Constants
 const PORT = 8080;
-
 // App
 const app = express();
 app.get('/', function (req, res) {
-  res.send('Hello world\n');
+  res.send('Hello world\n' + 'deployed ' + process.env.IMAGE_NAME);
 });
 
 app.listen(PORT);
