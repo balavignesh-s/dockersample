@@ -8,7 +8,7 @@ env:
 build:
   ci:
     - sudo docker build --rm -t=$IMAGE_NAME:$BRANCH.$SHIPPABLE_BUILD_NUMBER .
-
+    - echo "is fork $IS_FORK"
   post_ci:
     - sudo docker push $IMAGE_NAME:$BRANCH.$SHIPPABLE_BUILD_NUMBER
 
