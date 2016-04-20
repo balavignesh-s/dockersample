@@ -1,1 +1,1 @@
-console.log('i am fucked');
+ console.log('i am fucked');
