@@ -3,7 +3,6 @@ language: node_js
 env:
   matrix:
     - M1=one
-    - M2=two
     - IMAGE_NAME=balavignesh/noidea
 build:
   ci:
